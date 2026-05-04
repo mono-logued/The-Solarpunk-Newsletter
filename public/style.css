@@ -1,0 +1,41 @@
+:root {
+    /* Actual colours */
+    --solarized-base2: #eee8d5;
+    --solarized-base3: #fdf6e3;
+    --xkcd-forest-green: #06470c;
+
+    /* Theme colours */
+    --background-color: var(--solarized-base3);
+    --background-color-darker: var(--solarized-base2);
+    --theme-color: var(--xkcd-forest-green);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: sans-serif;
+}
+
+h1, h2, h3 {
+    color: var(--theme-color);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    & > li {
+        & > a {
+	    color: var(--theme-color);	
+            display: block;
+	    padding: 0.5em 1em;
+	    text-decoration: none;
+        }
+
+        & > a:hover {
+	    background-color: var(--background-color-darker);
+        }
+    }
+}
+
